@@ -8,7 +8,7 @@ let shiftY = 0;
 const dropTargets = []
 
 function touchStart(e) {
-    e.preventDefault();
+    //e.preventDefault();
 
     let target = e.target;
     console.log(target);
