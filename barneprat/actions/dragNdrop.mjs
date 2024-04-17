@@ -8,7 +8,7 @@ let shiftY = 0;
 const dropTargets = []
 
 function touchStart(e) {
-    //e.preventDefault();
+    //e.preventDefault(); // This makes the click events stop working.
 
     let target = e.target;
     console.log(target);
@@ -32,8 +32,9 @@ function touchStart(e) {
     }
 }
 
+document.body.addEventListener('touchstart', touchStart, { passive: false });
 if (isRuningOnTouchDevice()) {
-   // document.body.addEventListener('touchstart', touchStart, { passive: false });
+    document.body.addEventListener('touchstart', touchStart, { passive: false });
 }
 
 
@@ -76,8 +77,6 @@ const Drag = (item, label = "dragDefault") => {
 
     item.dragId = randomString();
     item.target.setAttribute("data-drag-id", item.dragId);
-
-
 
     item.target.onmousedown = (e) => {
         dragItem = item;
