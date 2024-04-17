@@ -33,7 +33,7 @@ function touchStart(e) {
 }
 
 if (isRuningOnTouchDevice()) {
-    document.body.addEventListener('touchstart', touchStart, { passive: false });
+   // document.body.addEventListener('touchstart', touchStart, { passive: false });
 }
 
 
