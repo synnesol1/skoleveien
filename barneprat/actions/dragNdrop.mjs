@@ -1,4 +1,4 @@
-import { isRuningOnTouchDevice, randomString } from "../utils/utils.mjs"
+import { isRuningOnTouchDevice, randomString } from "../utils/utilslib.mjs"
 
 let dragTarget = null;
 let dragItem = null;
